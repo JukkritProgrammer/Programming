@@ -1,0 +1,508 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+    background-color: black;
+    color: #fff;
+    padding: 0 9rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+nav ul li a {
+    padding: 0 0.9rem;
+}
+
+.sign-up-button {
+    background-color: tomato;
+    width: 89px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color .4s;
+    border-radius: 5px;
+}
+
+.sign-up-button:hover {
+    background-color: rgb(214, 84, 61);;
+}
+
+#nav-list {
+    display: none;
+}
+
+#Close {
+    display: none;
+}
+
+.menu i {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.menu {
+    display: none;
+}
+
+.Header {
+    background-image: url("img/html.png");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 400px;
+    color: #fff;
+}
+
+.learn-more-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(34, 134, 255);
+    height: 45px;
+    width: 150px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color .5s;
+}
+
+.learn-more-button:hover {
+    background-color: rgb(30, 109, 206);
+}
+
+.sticky {
+    position: sticky;
+    padding: 0 9rem;
+    top: 0;
+    max-width: 100%;
+    animation-name: navbar;
+    animation-duration: .6s;
+    z-index: 999
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+
+    img {
+        max-width: 125px;
+    }
+}
+
+.programming-languages {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    text-align: center;
+    column-gap: 80px;
+    row-gap: 20px;
+}
+
+.skills-title {
+    font-size: 32px;
+}
+
+.services-title {
+    font-size: 32px;
+}
+
+.projects-title {
+    font-size: 32px;
+}
+
+.services {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 200px;
+}
+
+.services-container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    grid-template-columns: 27% 27% 27%;
+    column-gap: 40px;
+}
+
+.service {
+    text-align: center;
+    cursor: pointer;
+    padding: 40px;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition: color .4s, background-color .4s, border-radius .4s, transform .4s;
+}
+
+.service:hover {
+    background-color: rgb(97, 18, 255);
+    border-radius: 10px;
+    color: #fff;
+    transform: scale(1.07);
+}
+
+.service i {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.about {
+    background-color: rgb(56, 109, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    height: 400px;
+}
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 50px;
+    color: #fff;
+}
+
+.bootstrap {
+    margin-top: 20px;
+}
+
+.about-img img {
+    width: 300px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform .5s;
+}
+
+.about-img img:hover {
+   transform: scale(1.07);
+}
+
+.contact-container i {
+    color: black;
+    font-size: 30px;
+    transition: color .5s, transform .5s;
+}
+
+.contact-container i:hover {
+    transform: scale(1.09);
+    color: #fff;
+}
+
+.modal {
+    background-color: rgb(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: none;
+    z-index: 1000;
+}
+
+.modal-container {
+    position: relative;
+    padding: 10px;
+    animation-name: modal;
+    animation-duration: .4s;
+
+    img {
+        max-width: 550px;
+        width: 100%;
+        border-radius: 15px;
+    }
+
+    i {
+        font-size: 32px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: grey;
+        cursor: pointer;
+        transition: color .4s;
+    }
+
+    i:hover {
+        color: black;
+    }
+}
+
+.projects {
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 40px;
+    margin-top: 50px;
+}
+
+.card {
+    width: 330px;
+    width: 100%;
+    max-width: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgb(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+}
+
+.card-content {
+    height: 150px;
+    padding: 20px;
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    p {
+        margin: 10px 0;
+    }
+}
+
+.card_button {
+    display: flex;
+    border: 1px solid tomato;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 120px;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: background-color .4s, color .4s;
+}
+
+.card_button:hover {
+    color: #fff;
+    background-color: rgb(221, 87, 64);
+}
+
+footer {
+    background-color: black;
+    color: #fff;
+    padding: 40px;
+    margin-top: 200px;
+    text-align: center;
+}
+
+.programming {
+    transition: transform .4s;
+}
+
+.programming:hover {
+    transform: scale(1.10);
+}
+
+@keyframes navbar {
+    from {top: -100px};
+    to {top: 0px}
+}
+
+@keyframes modal {
+    from {transform: scale(0);}
+    to {transform: scale(1);}
+}
+
+@media screen and (max-width: 1160px) {
+    .projects-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 864px) {
+    nav {
+        padding: 0 2rem;
+    }
+    .sticky {
+        padding: 0 2rem;
+    }
+    nav ul {
+        display: none;
+    }
+    .sign-up-button {
+        display: none;
+    }
+    .menu {
+        display: block;
+    }
+    #nav-list {
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        right: 0;
+        left: 0;
+        top: 80px;
+        height: 0px;
+        background-color: black;
+        row-gap: 22px;
+        transition: height .5s;
+        overflow: hidden;
+    }
+    #nav-list li a {
+        color: #fff;
+    }
+    .sign-up-button-nav {
+        background-color: tomato;
+        width: 100%;
+        height: 50px;
+        border-radius: 15px;
+        font-size: 19px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: background-color .4s;
+    }
+    .sign-up-button-nav:hover {
+        background-color: rgb(218, 84, 60);
+    }
+}
+
+@media screen and (max-width: 819px) {
+    .services-container {
+        grid-template-columns: 90%;
+        row-gap: 20px;
+    }
+    .service {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 763px) {
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 739px) {
+    .skills {
+        img {
+            max-width: 100px;
+        }
+    }
+}
+
+@media screen and (max-width: 679px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+        row-gap: 20px;
+    }
+    .about {
+        height: 550px;
+    }
+}
+
+@media screen and (max-width: 639px) {
+    .skills {
+        img {
+            max-width: 80px;
+        }
+    }
+}
+
+@media screen and (max-width: 587px) {
+    .programming-languages {
+        grid-template-columns: auto auto auto;
+        column-gap: 30px;
+        row-gap: 20px;
+    }
+    .bootstrap {
+        margin-top: 15px;
+    }
+}
+
+@media screen and (max-width: 458px) {
+    .skills-title {
+        font-size: 25px;
+    }
+
+    .services-title {
+        font-size: 25px;
+    }
+
+    .projects-title {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 427px) {
+    .programming-languages {
+        grid-template-columns: auto auto;
+        column-gap: 50px;
+    }
+    .bootstrap {
+        margin-top: 14px;
+    }
+}
+
+@media screen and (max-width: 356px) {
+    .skills-title {
+        font-size: 22px;
+    }
+    .services-title {
+        font-style: 22px;
+    }
+    .projects-title {
+        font-size: 22px
+    }
+}
+
+@media screen and (max-height: 414px) {
+    .modal-container img {
+        max-width: 350px;
+    }
+}
+
+@media screen and (max-height: 344px) {
+    .modal-container img {
+        max-width: 320px;
+    }
+}
